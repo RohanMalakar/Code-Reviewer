@@ -2,17 +2,20 @@ import generateContent from "../Service/ai.service.js";
 
 const getReview = async (req, res) => {
   try {
-    const code = req.body.code;
+
+    const { code, language } = req.body;
+
     if (!code) {
-      res.status(400).send("code is required  in the request body");
-      return;
+      return res.status(400).json({ error: "Code is required in the request body" });
     }
-    const result = await generateContent(code);
-    res.send(result);
+
+    const result = await generateContent({ code, language });
+
+    res.status(200).json(result);
 
   } catch (error) {
-    console.log(error.message);
-    res.status(500).send(error.message);
+    console.error("Error in getReview:", error.message);
+    res.status(500).json({ error: error.message }); 
   }
 };
 
