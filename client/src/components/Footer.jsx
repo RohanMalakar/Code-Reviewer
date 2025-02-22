@@ -2,7 +2,7 @@ import React from 'react'
 
 function Footer() {
   return (
-    <footer class="shadow-sm bg-gray-900">
+    <footer class="shadow-sm bg-[#120744]">
         <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
             <div class="sm:flex sm:items-center sm:justify-between">
                 <h1 style={{ fontFamily: "var(--font-bruno)" }} class="text-xl font-semibold text-white sm:text-2xl">CodeReviewer</h1>

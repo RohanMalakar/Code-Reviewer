@@ -1,7 +1,7 @@
 export default function About() {
   return (
-    <section id="about" className="py-16 bg-black">
-      <div className="max-w-3xl mx-auto text-center">
+    <section id="about" className="py-16 px-5   bg-gradient-to-r from-[#120744] via-[#7637be] to-[#319ae2] ">
+      <div className="max-w-3xl border-2 p-5 m-5 lg:p-20 rounded-2xl bg-[#120744] mx-auto text-center">
         <h2 style={{ fontFamily: "var(--font-bruno)" }} className="text-3xl  font-bold mb-4 text-gray-800  dark:text-white navy-blue:text-gray-100">
           About CodeReviewer
         </h2>

@@ -39,23 +39,23 @@ function CodeReviwer() {
 
   return (
     <div className="h-screen w-full flex">
-      <div ref={containerRef} className="flex w-full bg-gray-100">
+      <div ref={containerRef} className="flex flex-col md:flex-row w-full bg-gray-100">
         {/* Left Panel (Code Editor) */}
         <div
-          className="bg-white overflow-hidden select-none"
-          style={{ width: `${leftWidth}px`, minWidth: "500px" }}
+          className=" overflow-hidden md:min-w-[500px] select-none"
+          style={{ width: `${leftWidth}px`}}
         >
           <CodeEditor code={code} loading={loading} setLoading={setLoading} setCode={setCode} language={language} setReview={setReview} setLanguage={setLanguage} />
         </div>
 
         {/* Resizable Divider */}
         <div
-          className="w-2 cursor-ew-resize bg-gray-600 hover:bg-gray-800"
+          className="w-2 hidden md:flex cursor-ew-resize bg-gray-600 hover:bg-gray-800"
           onMouseDown={handleMouseDown}
         ></div>
 
         {/* Right Panel */}
-        <div className="flex-1  bg-gray-200  min-w-[50%] overflow-auto">
+        <div className="flex-1  bg-gray-200 w-full lg:min-w-[50%] overflow-auto">
           <CodeReview loading={loading} review={review}/>
         </div>
       </div>

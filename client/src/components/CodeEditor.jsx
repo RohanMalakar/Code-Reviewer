@@ -45,7 +45,7 @@ function CodeEditor({ code, setCode,language, loading, setLanguage,setLoading ,s
   }
 
   return (
-    <div className='flex relative overflow-hidden  bg-gray-900 flex-col text-amber-50 min-h-screen w-full'>
+    <div className='flex relative overflow-hidden text-2xl bg-gray-900 flex-col  text-amber-50 min-h-[50vh] lg:min-h-screen w-full'>
       <div className='flex relative  w-full  bg-amber-700 h-20 items-center justify-center'>
         <form class="absolute top-4 right-5">
           <select 
