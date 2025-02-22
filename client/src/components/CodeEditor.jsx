@@ -28,7 +28,7 @@ function CodeEditor({ code, setCode,language, loading, setLanguage,setLoading ,s
       return setReview('Please enter some code');
     }
     try {
-      const response = await fetch("http://localhost:3000/api/v1/ai/get-review", {
+      const response = await fetch("https://code-reviewer-0ri0.onrender.com/api/v1/ai/get-review", {
         method: "POST",
         headers: {
           "Content-Type": "application/json", // ✅ Add this header
